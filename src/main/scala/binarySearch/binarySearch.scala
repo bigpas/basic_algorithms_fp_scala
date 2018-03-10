@@ -13,7 +13,7 @@ import scala.annotation.tailrec
   *
   
   * @param data A sorted Vector. Vector in Scala is the "go to" immutable, indexed Sequence
-  * @param target The target.
+  * @param target The target element.
   * @author Pasquale Dente
   * @version 1.0
   * @todo Add more functionality. Fast failing error: if(data != data.sorted) Error Message "Input Vector is not Sorted"
