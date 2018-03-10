@@ -23,6 +23,11 @@ import scala.annotation.tailrec
 object binarySearch extends App{
 
 type Index = Int
+   
+   /**
+   * @return Returns the index of the target if it is present or None when the target
+   * is not in the data Vector
+   */
 
   def binarySearch(data: Vector[Double], target: Double): Option[Index] = {
 
