@@ -16,7 +16,7 @@ import scala.annotation.tailrec
   * @param target The target element.
   * @author Pasquale Dente
   * @version 1.0
-  * @todo Add more functionality. Fast failing error: if(data != data.sorted) Error Message "Input Vector is not Sorted"
+  * @todo Add more functionality. 
   * @see <https://en.wikipedia.org/wiki/Binary_search_algorithm>
   */
 
@@ -30,7 +30,9 @@ type Index = Int
    */
 
   def binarySearch(data: Vector[Double], target: Double): Option[Index] = {
-
+    
+    val sortedData = data.sorted
+    
     @tailrec
     def go(low: Index, high: Index): Option[Index] = {
       if(low > high)
@@ -38,7 +40,7 @@ type Index = Int
       else {
         val mid: Index = low + high
 
-        data(mid) match {
+        sortedData(mid) match {
           case mv if (mv == target) => Some(mid)
           case mv if (mv <= target) => go(mid + 1, high)
           case _ => go(low, mid - 1)
