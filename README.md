@@ -3,3 +3,5 @@ Basic CS algorithms demonstrated with native Scala functional code
 
 + Binary Search
 + Selection Sort
++ Recursion
++ Quicksort
