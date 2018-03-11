@@ -12,9 +12,9 @@ object selectionSort extends App {
     def select(m: A, as: List[A], zs: List[A], bs: List[A]): List[A] = 
       as match {
         case head :: tail => if (m > head) 
-                              select(m, tail, head :: zs, bs)
+                                select(m, tail, head :: zs, bs)
                               else 
-                              select(head, tail, m :: zs, bs)
+                                select(head, tail, m :: zs, bs)
         case Nil => sort(zs, m :: bs)
       }
 
