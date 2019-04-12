@@ -6,3 +6,10 @@ Basic CS algorithms demonstrated with native Scala functional code
 + Selection Sort
 + Recursion
 + Quicksort
++GraphSearch
+    + BFS
+    + DFS
+
+
+## NB
+`./sbt test`
