@@ -1,5 +1,6 @@
 package graphSearch
 
+import scala.annotation.tailrec
 
 /**
   * A Graph data structure with 2 associated search methods:
@@ -21,6 +22,7 @@ object graphSearch extends App {
 
     def BFS(start: Vertex): List[List[Vertex]] = {
 
+      @tailrec
       def BFS0(elems: List[Vertex], visited: List[List[Vertex]]): List[List[Vertex]] = {
         val newNeighbors = elems.flatMap(g(_)).filterNot(visited.flatten.contains).distinct
 
@@ -39,7 +41,7 @@ object graphSearch extends App {
         if (visited.contains(v))
           visited
         else {
-          val neighbours: List[Vertex] = g(v) filterNot visited.contains
+          val neighbours: List[Vertex] = g(v).filterNot(visited.contains)
           neighbours.foldLeft(v :: visited)((b, a) => DFS0(a, b))
         }
       }
