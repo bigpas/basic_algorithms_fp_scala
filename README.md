@@ -12,4 +12,4 @@ Basic CS algorithms demonstrated with native Scala functional code
 
 
 ## NB
-`./sbt test`
+`sbt test`
